@@ -13,12 +13,12 @@ source:
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: ${PYTHON} setup.py install --single-version-externally-managed --record=record.txt
   entry_points:
     - wheel=wheel.tool:main
 
 requirements:
-  build:
+  host:
     - python
     - setuptools
 
@@ -53,3 +53,4 @@ extra:
     - jakirkham
     - pelson
     - ocefpaf
+    - mingwandroid
