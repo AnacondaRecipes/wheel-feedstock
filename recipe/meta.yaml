@@ -26,21 +26,22 @@ requirements:
     - python
     - setuptools
 
-test:
-  imports:
-    - wheel
-    - wheel.signatures
-    - wheel.test
-    - wheel.tool
-
-  commands:
-    - wheel --help
-
-  requires:
-    - coverage
-    - jsonschema
-    - pytest
-    - pytest-cov
+# TODO :: When test and run deps are not lumped together it may be possible to put these tests back.
+# test:
+#   imports:
+#     - wheel
+#     - wheel.signatures
+#     - wheel.test
+#     - wheel.tool
+#
+#   commands:
+#     - wheel --help
+#
+#   requires:
+#     - coverage
+#     - jsonschema
+#     - pytest
+#     - pytest-cov
 
 about:
   home: https://bitbucket.org/pypa/wheel/
