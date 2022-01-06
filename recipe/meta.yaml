@@ -18,14 +18,18 @@ build:
 requirements:
   host:
     - python
-    - setuptools >=40.9
+    - setuptools >=40.9.0
   run:
     - python
 
 test:
   imports:
     - wheel
+    - wheel.cli
+  requires:
+    - pip
   commands:
+    - pip check
     - wheel --help
 
 about:
