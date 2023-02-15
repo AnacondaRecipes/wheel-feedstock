@@ -1,4 +1,4 @@
-{% set version = "0.37.1" %}
+{% set version = "0.38.4" %}
 
 package:
   name: wheel
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/w/wheel/wheel-{{ version }}.tar.gz
-  sha256: e9a504e793efbca1b8e0e9cb979a249cf4a0a7b5b8c9e8b65a5e39d49529c1c4
+  sha256: 965f5259b566725405b05e7cf774052044b1ed30119b5d586b2703aafe8719ac
 
 build:
   noarch: python
