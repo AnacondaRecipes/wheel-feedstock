@@ -58,3 +58,6 @@ extra:
     - pelson
     - ocefpaf
     - mingwandroid
+  skip-lints:
+    - uses_setup_py
+    - missing_wheel
