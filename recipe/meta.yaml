@@ -1,5 +1,5 @@
 {% set name = "wheel" %}
-{% set version = "0.38.4" %}
+{% set version = "0.38.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 965f5259b566725405b05e7cf774052044b1ed30119b5d586b2703aafe8719ac
+  sha256: ea041edf63f4ccba53ad6e035427997b3bb10ee88a4cd014ae82aeb9eea77bb9
 
 build:
   number: 0
@@ -18,18 +18,16 @@ build:
 
 requirements:
   host:
-    - python
-    - setuptools
+    - python >=3.7
+    - setuptools >=45.2.0
     # pip has not to be present in the host section
   run:
-    - python
+    - python >=3.7
 
 test:
   imports:
     - wheel
     - wheel.cli
-    - wheel.vendored
-    - wheel.vendored.packaging
   requires:
     - pip
   commands:
