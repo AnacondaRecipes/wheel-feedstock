@@ -18,11 +18,11 @@ build:
 
 requirements:
   host:
-    - python >=3.7
-    - setuptools >=45.2.0
+    - python
+    - setuptools
     # pip has not to be present in the host section
   run:
-    - python >=3.7
+    - python
 
 test:
   imports:
