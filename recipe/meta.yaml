@@ -1,5 +1,5 @@
 {% set name = "wheel" %}
-{% set version = "0.38.4" %}
+{% set version = "0.41.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,20 +7,19 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 965f5259b566725405b05e7cf774052044b1ed30119b5d586b2703aafe8719ac
+  sha256: 0c5ac5ff2afb79ac23ab82bab027a0be7b5dbcf2e54dc50efe4bf507de1f7985
 
 build:
   number: 0
   skip: True  # [py<37]
-  script: python setup.py install --single-version-externally-managed --record=record.txt
   entry_points:
     - wheel = wheel.cli:main
 
 requirements:
   host:
     - python
-    - setuptools
-    # pip has not to be present in the host section
+    - flit-core >=3.8,<4
+    - python-installer
   run:
     - python
 
@@ -59,5 +58,4 @@ extra:
     - ocefpaf
     - mingwandroid
   skip-lints:
-    - uses_setup_py
     - missing_wheel
