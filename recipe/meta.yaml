@@ -1,5 +1,5 @@
 {% set name = "wheel" %}
-{% set version = "0.45.1" %}
+{% set version = "0.46.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 661e1abd9198507b1409a20c02106d9670b2576e916d58f520316666abca6729
+  sha256: fd477efb5da0f7df1d3c76c73c14394002c844451bd63229d8570f376f5e6a38
 
 build:
   number: 0
-  skip: True  # [py<38]
+  skip: true  # [py<38]
   entry_points:
     - wheel = wheel.cli:main
 
@@ -43,11 +43,11 @@ about:
   license_file: LICENSE.txt
   summary: A built-package format for Python.
   description: |
-    This library is the reference implementation of the Python wheel packaging standard, 
+    This library is the reference implementation of the Python wheel packaging standard,
     as defined in PEP 427.
     It has two different roles:
-      1. A setuptools extension for building wheels that provides the bdist_wheel setuptools command
-      2. A command line tool for working with wheel files
+    1. A setuptools extension for building wheels that provides the bdist_wheel setuptools command
+    2. A command line tool for working with wheel files
   dev_url: https://github.com/pypa/wheel
   doc_url: https://wheel.readthedocs.io/
 
