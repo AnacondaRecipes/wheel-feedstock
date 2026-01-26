@@ -1,5 +1,5 @@
 {% set name = "wheel" %}
-{% set version = "0.45.1" %}
+{% set version = "0.46.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,28 +7,27 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 661e1abd9198507b1409a20c02106d9670b2576e916d58f520316666abca6729
+  sha256: e3e79874b07d776c40bd6033f8ddf76a7dad46a7b8aa1b2787a83083519a1803
 
 build:
   number: 0
-  skip: True  # [py<38]
+  skip: True  # [py<39]
   entry_points:
-    - wheel = wheel.cli:main
+    - wheel = wheel._commands:main
 
 requirements:
   host:
     - python
-    - flit-core >=3.8,<4
     - python-installer
+    - flit-core >=3.11,<4
   run:
     - python
+    - packaging >=24.0
 
 test:
   imports:
     - wheel
-    - wheel.cli
-    - wheel.vendored
-    - wheel.vendored.packaging
+    - wheel._commands
   requires:
     - pip
   commands:
