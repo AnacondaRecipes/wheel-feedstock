@@ -56,5 +56,3 @@ extra:
     - pelson
     - ocefpaf
     - mingwandroid
-  skip-lints:
-    - missing_wheel
