@@ -22,7 +22,7 @@ requirements:
     - flit-core >=3.11,<4
   run:
     - python
-    - packaging >=24.0
+    - packaging >=26.0
 
 test:
   imports:
