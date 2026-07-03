@@ -9,6 +9,7 @@ upload_channels:
   - ad-testing
 
 channels:
+  - https://staging.continuum.io/pbp/fs/packaging-feedstock/pr19/244239a
   - https://staging.continuum.io/pbp/fs/pip-feedstock/pr55/d4ff60d
   - https://staging.continuum.io/pbp/fs/python-feedstock/pr232/fe2b513
 
