@@ -19,7 +19,8 @@ requirements:
   host:
     - python
     - python-installer
-    - flit-core >=3.11,<4
+    # Upstream wheel still declares flit_core>=3.11,<4; relax for py315 bootstrap on flit-core 4.0.2
+    - flit-core >=3.11,<5
   run:
     - python
     - packaging >=26.0
