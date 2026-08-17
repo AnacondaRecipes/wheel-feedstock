@@ -8,8 +8,12 @@ build_parameters:
 upload_channels:
   - ad-testing/label/py315
 
+# Resolve packaging/pip/flit/python 3.15.0rc1 stack from PR staging.
 channels:
-  - ad-testing/label/py315
+  - https://staging.continuum.io/pbp/fs/packaging-feedstock/pr25/d920b21
+  - https://staging.continuum.io/pbp/fs/pip-feedstock/pr56/4d88ec8
+  - https://staging.continuum.io/pbp/fs/flit-feedstock/pr22/c3d2453
+  - https://staging.continuum.io/pbp/fs/python-feedstock/pr244/e3ff93e
 
 build_env_vars:
   ANACONDA_ROCKET_ENABLE_PY315: True
