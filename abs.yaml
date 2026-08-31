@@ -5,4 +5,4 @@ build_env_vars:
 channels:
   - https://staging.continuum.io/pbp/fs/flit-feedstock/pr23/4df3dd3
   - https://staging.continuum.io/pbp/fs/setuptools-feedstock/pr109/cac687d
-  - https://staging.continuum.io/pbp/fs/packaging-feedstock/pr26/62299c3
+  - https://staging.continuum.io/pbp/fs/packaging-feedstock/pr26/c60aab5
