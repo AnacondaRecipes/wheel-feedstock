@@ -1,2 +1,8 @@
+build_parameters:
+  - "--no-test"
 build_env_vars:
-  ANACONDA_ROCKET_ENABLE_PY314 : yes
+  ANACONDA_ROCKET_ENABLE_FREETHREADING: yes
+channels:
+  - https://staging.continuum.io/pbp/fs/flit-feedstock/pr23/4df3dd3
+  - https://staging.continuum.io/pbp/fs/setuptools-feedstock/pr109/cac687d
+  - https://staging.continuum.io/pbp/fs/packaging-feedstock/pr26/c60aab5

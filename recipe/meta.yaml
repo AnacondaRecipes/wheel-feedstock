@@ -10,7 +10,7 @@ source:
   sha256: cc72bd1009ba0cf63922e28f94d9d83b920aa2bb28f798a31d0691b02fa3c9b3
 
 build:
-  number: 0
+  number: 1
   skip: True  # [py<39]
   entry_points:
     - wheel = wheel._commands:main
@@ -19,7 +19,8 @@ requirements:
   host:
     - python
     - python-installer
-    - flit-core >=3.11,<4
+    # upstream <4; only flit-core 4.0.2 cp314t on staging
+    - flit-core >=3.11
   run:
     - python
     - packaging >=26.0
