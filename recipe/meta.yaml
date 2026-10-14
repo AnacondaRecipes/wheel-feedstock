@@ -2,7 +2,7 @@
 {% set version = "0.48.0" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
@@ -20,7 +20,6 @@ requirements:
     - python
     - python-installer
     - flit-core >=3.11,<5
-    - pip
   run:
     - python
     - packaging >=24.0
